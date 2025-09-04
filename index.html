@@ -23,11 +23,11 @@
                 calculator=calculator.slice(0,-1);
                 display.value=calculator;
                 ">del</button></td>
-                <td><button id="%" onclick="
+                <td><button onclick="
                 calculator+='%' ;
                 display.value=calculator;
                 ">%</button></td>
-                <td><button id="/" onclick="
+                <td><button onclick="
                 calculator+='/';
                 display.value=calculator;
                 ">/</button></td>
@@ -45,7 +45,7 @@
                 calculator+='9';
                 display.value=calculator;
                 ">9</button></td>
-                <td><button id="*" onclick="
+                <td><button onclick="
                 calculator+='*';
                 display.value=calculator;
                 ">*</button></td>
@@ -63,7 +63,7 @@
                 calculator+='6';
                 display.value=calculator;
                 ">6</button></td>
-                <td><button id="-" onclick="
+                <td><button onclick="
                 calculator+='-';
                 display.value=calculator;
                 ">-</button></td>
@@ -81,7 +81,7 @@
                 calculator+='3';
                 display.value=calculator;
                 ">3</button></td>
-                <td><button id="+" onclick="
+                <td><button onclick="
                 calculator+=' + ';
                 display.value=calculator;
                 ">+</button></td>
@@ -97,9 +97,14 @@
                 display.value=calculator;
                 ">.</button></td>
                 <td><button onclick="
-                evaluator = eval(calculator);
-                display.value=evaluator;
-                calculator=evaluator;
+                    if (hasInvalidOperators(calculator)) {
+                       display.value = 'Math Error';
+                 } 
+                     else {
+                     evaluator = eval(calculator);
+                     display.value = evaluator;
+                     calculator = evaluator;
+                    }
                 ">=</button></td> 
             </tr>
         </table>
