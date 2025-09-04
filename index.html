@@ -15,34 +15,92 @@
                 </td>
             </tr>
             <tr>
-                <td><button id="AC">AC</button></td>
-                <td><button id="del">del</button></td>
-                <td><button id="%">%</button></td>
-                <td><button id="/">/</button></td>
+                <td><button onclick="
+                    calculator='';
+                    display.value=calculator;
+                    ">AC</button></td>
+                <td><button onclick="
+                calculator=calculator.slice(0,-1);
+                display.value=calculator;
+                ">del</button></td>
+                <td><button id="%" onclick="
+                calculator+='%' ;
+                display.value=calculator;
+                ">%</button></td>
+                <td><button id="/" onclick="
+                calculator+='/';
+                display.value=calculator;
+                ">/</button></td>
             </tr>
             <tr>
-                <td><button id="7">7</button></td>
-                <td><button id="8">8</button></td>
-                <td><button id="9">9</button></td>
-                <td><button id="*">*</button></td>
+                <td><button onclick="
+                    calculator+='7';
+                    display.value=calculator;
+                    ">7</button></td>
+                <td><button onclick="
+                calculator+='8';
+                display.value=calculator;
+                ">8</button></td>
+                <td><button onclick="
+                calculator+='9';
+                display.value=calculator;
+                ">9</button></td>
+                <td><button id="*" onclick="
+                calculator+='*';
+                display.value=calculator;
+                ">*</button></td>
             </tr>
             <tr>
-                <td><button id="4">4</button></td>
-                <td><button id="5">5</button></td>
-                <td><button id="6">6</button></td>
-                <td><button id="-">-</button></td>
+                <td><button onclick="
+                    calculator+='4';
+                    display.value=calculator;
+                    ">4</button></td>
+                <td><button onclick="
+                calculator+='5';
+                display.value=calculator;
+                ">5</button></td>
+                <td><button onclick="
+                calculator+='6';
+                display.value=calculator;
+                ">6</button></td>
+                <td><button id="-" onclick="
+                calculator+='-';
+                display.value=calculator;
+                ">-</button></td>
             </tr>
             <tr>
-                <td><button id="1">1</button></td>
-                <td><button id="2">2</button></td>
-                <td><button id="3">3</button></td>
-                <td><button id="+">+</button></td>
+                <td><button onclick="
+                    calculator+='1';
+                    display.value=calculator;
+                    ">1</button></td>
+                <td><button onclick="
+                calculator+='2';
+                display.value=calculator;
+                ">2</button></td>
+                <td><button onclick="
+                calculator+='3';
+                display.value=calculator;
+                ">3</button></td>
+                <td><button id="+" onclick="
+                calculator+=' + ';
+                display.value=calculator;
+                ">+</button></td>
             </tr>
             <tr>
                 <td> </td>
-                <td><button id="0">0</button></td>
-                <td><button id=".">.</button></td>
-                <td><button id="eql">=</button></td> 
+                <td><button onclick="
+                calculator+= '0';
+                display.value=calculator;
+                " >0</button></td>
+                <td><button onclick="
+                calculator+= '.';
+                display.value=calculator;
+                ">.</button></td>
+                <td><button onclick="
+                evaluator = eval(calculator);
+                display.value=evaluator;
+                calculator=evaluator;
+                ">=</button></td> 
             </tr>
         </table>
         </div>
